@@ -1,9 +1,10 @@
 [project]
 name = "delete-aae"
 version = "1.0.0"
-description = "A simple script to delete .AAE files recursively"
+description = "Handle images after import from Iphone"
 authors = [{ name = "Pieterjan Vandenweghe" }]
 requires-python = ">=3.11"
 
 [project.scripts]
 delete-aae = "delete_aae.main:main"
+move-imported-files = "move_imported_files.cli:main"
