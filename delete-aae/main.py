@@ -1,5 +1,6 @@
 import os
 import sys
+from move_imported_files.core import move_files
 
 def delete_aae_files(root_dir):
     """
@@ -32,3 +33,10 @@ if __name__ == "__main__":
         delete_aae_files(target_dir)
     else:
         print("Invalid directory path.")
+
+# After deletion completes, run the mover (use your actual variables)
+try:
+    # replace src_dir/base_target/dry_run_flag with your local names if different
+    move_files(source_dir, base_target, dry_run=False)
+except Exception as e:
+    print(f"Error running move_imported_files: {e}")
